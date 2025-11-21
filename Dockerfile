@@ -15,7 +15,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar toda la estructura del proyecto
-COPY Practica\ 1/ ./Practica\ 1/
+COPY ["Practica 1/", "./Practica 1/"]
 
 # Crear un usuario no privilegiado para mayor seguridad
 RUN useradd -m -u 1000 appuser && \
@@ -25,4 +25,6 @@ RUN useradd -m -u 1000 appuser && \
 USER appuser
 
 # Comando de inicio - ejecutar el main.py principal
-CMD ["python", "Practica 1/main.py"]
+CMD ["python", "Practica 1/Tienda_online/main.py"]
+
+

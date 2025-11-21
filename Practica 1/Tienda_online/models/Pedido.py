@@ -18,7 +18,7 @@ class Pedido:
         self.cliente = cliente
         self.productos = productos  # lista
         
-    def calccular_total(self):
+    def calcular_total(self):
         """Calcula el importe total del pedido."""
         return sum(prod.precio * cant for prod, cant in self.productos)
         
